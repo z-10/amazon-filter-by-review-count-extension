@@ -2,14 +2,12 @@
   "manifest_version": 3,
   "name": "Amazon Filter by Reviews Count",
   "version": "1.1",
-  "description": "Hide Amazon products with too few reviews. Useful when you sort by average customer review and want to get rid of all this 5 stars and 1 review in broken english crap.",
-  "content_scripts": [
-    {
-      "matches": ["*://*.amazon.com/*"],
-      "js": ["content.js"],
-      "run_at": "document_idle"
-    }
-  ],
+  "description": "Hide low-review Amazon products when sorting by customer rating.",
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
@@ -18,10 +16,12 @@
       "128": "icon128.png"
     }
   },
-  "icons": {
-    "16": "icon16.png",
-    "48": "icon48.png",
-    "128": "icon128.png"
-  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.amazon.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
   "permissions": ["storage"]
 }
