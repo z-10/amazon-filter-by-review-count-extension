@@ -57,15 +57,34 @@
       margin-top: 8px;
       display: none;
     }
+
+    .kofi {
+      margin-top: 16px;
+      text-align: center;
+    }
+
+    .kofi img {
+      height: 36px;
+      border: 0;
+    }
   </style>
 </head>
 <body>
   <h2>Amazon Review Filter</h2>
+
   <label for="minReviews">Minimum Reviews</label>
   <input type="number" id="minReviews" min="0" value="100" />
+
   <button id="saveBtn">Save</button>
   <div class="status" id="status">Saved!</div>
 
+  <div class="kofi">
+    <a href="https://ko-fi.com/M4M31F5502" target="_blank">
+      <img src="https://storage.ko-fi.com/cdn/kofi5.png" alt="Support me on Ko-fi" />
+    </a>
+  </div>
+
+  <!-- External script file only (required by MV3 CSP) -->
   <script src="popup.js"></script>
 </body>
 </html>
